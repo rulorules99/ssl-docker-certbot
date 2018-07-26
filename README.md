@@ -68,6 +68,7 @@ certonly --webroot \
 ### Stop te example container without SSL
 ```bash
 $ cd /docker/letsencrypt-docker-nginx/src/letsencrypt
+
 $ docker-compose down
 ```
 
@@ -77,10 +78,13 @@ $ docker-compose down
 ```bash
 $ sudo mkdir -p /docker/letsencrypt-docker-nginx/src/production/production-site
 $ sudo mkdir -p /docker/letsencrypt-docker-nginx/src/production/dh-param
+
 $ sudo vim /docker/letsencrypt-docker-nginx/src/production/docker-compose.yml # Use content of file of ./production/docker-compose.yml
 $ sudo vim /docker/letsencrypt-docker-nginx/src/production/production.conf # Use content of file of ./production/production.conf                                                                                                               
 $ sudo vim /docker/letsencrypt-docker-nginx/src/production/production-site/index.html # Use content of file of ./production/index.html 
+
 $ sudo openssl dhparam -out /docker/letsencrypt-docker-nginx/src/production/dh-param/dhparam-2048.pem 2048
+
 $ cd /docker/letsencrypt-docker-nginx/src/production
 $ docker-compose up -d
 ```
