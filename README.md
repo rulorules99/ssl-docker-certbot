@@ -65,7 +65,7 @@ certonly --webroot \
 -d yourdomain.com -d www.yourdomain.com
 ```
 
-### Stop te example container without SSL
+### Stop the example container without SSL
 ```bash
 $ cd /docker/letsencrypt-docker-nginx/src/letsencrypt
 
@@ -74,7 +74,7 @@ $ docker-compose down
 
 # SSL CONFIG
 
-### Set up Your Production Site to Run in a Nginx Docker Container
+### Set up Your Production Site to Run in Nginx Docker Container
 ```bash
 $ sudo mkdir -p /docker/letsencrypt-docker-nginx/src/production/production-site
 $ sudo mkdir -p /docker/letsencrypt-docker-nginx/src/production/dh-param
