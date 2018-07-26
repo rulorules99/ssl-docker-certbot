@@ -14,7 +14,7 @@ WARNING!!!
 
 
 #### Config with out SSL, in the server run the next commands
-```bash
+```sh
 $ sudo mkdir -p /docker/letsencrypt-docker-nginx/src/letsencrypt/letsencrypt-site
 
 $ sudo vim /docker/letsencrypt-docker-nginx/src/letsencrypt/docker-compose.yml # Use content of file of ./letsencrypt/docker-compose.yml
