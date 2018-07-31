@@ -26,7 +26,7 @@ $ docker-compose up -d
 ```
 ### Test of certbot with --staging flag
 ```bash
-$ docker run -it --rm \
+$ sudo docker run -it --rm \
 -v /docker-volumes/etc/letsencrypt:/etc/letsencrypt \
 -v /docker-volumes/var/lib/letsencrypt:/var/lib/letsencrypt \
 -v /docker/letsencrypt-docker-nginx/src/letsencrypt/letsencrypt-site:/data/letsencrypt \
@@ -40,7 +40,7 @@ certonly --webroot \
 ```
 ### Test of certbot with aditional information
 ```bash
-$ docker run --rm -it --name certbot \
+$ sudo docker run --rm -it --name certbot \
 -v /docker-volumes/etc/letsencrypt:/etc/letsencrypt \
 -v /docker-volumes/var/lib/letsencrypt:/var/lib/letsencrypt \
 -v /docker/letsencrypt-docker-nginx/src/letsencrypt/letsencrypt-site:/data/letsencrypt \
@@ -53,7 +53,7 @@ $ sudo rm -rf /docker-volumes/
 
 ### Production of certbot certificate SSL
 ```bash
-$ docker run -it --rm \
+$ sudo docker run -it --rm \
 -v /docker-volumes/etc/letscrypt:/etc/letsencrypt \
 -v /docker-volumes/var/lib/letsencrypt:/var/lib/letsencrypt \
 -v /docker/letsencrypt-docker-nginx/src/letsencrypt/letsencrypt-site:/data/letsencrypt \
